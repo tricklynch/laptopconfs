@@ -1,11 +1,19 @@
 - name: Install dev apps
-  homebrew: name={{ item }} state=present
+  homebrew: name={{ item }}
   with_items:
+    - dog
     - git
     - htop
     - python3
     - vim
     - wget
+
+- name: Install from source
+  homebrew:
+    name={{ item }}
+    install_options=build-from-source
+  with_items:
+    - gping
 
 - name: Default git branch
   git_config:
