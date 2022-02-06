@@ -1,0 +1,32 @@
+- name: Install dev apps
+  homebrew: name={{ item }} state=present
+  with_items:
+    - git
+    - htop
+    - python3
+    - vim
+    - wget
+
+- name: Default git branch
+  git_config:
+    name: init.defaultBranch
+    value: main
+    scope: global
+
+- name: Default git editor
+  git_config:
+    name: core.editor
+    value: vim
+    scope: global
+
+- name: My committer email
+  git_config:
+    name: user.email
+    value: p@tricklynch.org
+    scope: global
+
+- name: My name
+  git_config:
+    name: user.name
+    value: Patrick Lynch
+    scope: global
