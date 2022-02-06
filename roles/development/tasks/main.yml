@@ -38,3 +38,8 @@
     name: user.name
     value: Patrick Lynch
     scope: global
+
+- name: Set vimrc
+  copy:
+    src: "{{ role_path }}/files/.vimrc"
+    dest: ~/.vimrc
