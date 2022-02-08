@@ -1,0 +1,15 @@
+- name: Install from dnf
+  dnf: name={{ item }}
+  with_items:
+    - keepassxc
+    - snapd
+
+- name: Install from snap
+  snap: name={{ item }}
+  with_items:
+    - bitwarden
+
+- name: Add keepassxc favorite
+  copy:
+    src: "{{ role_path }}/files/KeePassXC.desktop"
+    dest: /usr/share/applications/KeePassXC.desktop
