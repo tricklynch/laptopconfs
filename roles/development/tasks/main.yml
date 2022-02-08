@@ -39,7 +39,8 @@
     value: Patrick Lynch
     scope: global
 
-- name: Set vimrc
-  copy:
-    src: "{{ role_path }}/files/.vimrc"
+- name: Get vimrc
+  get_url:
+    url: https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
     dest: ~/.vimrc
+    mode: 0400
