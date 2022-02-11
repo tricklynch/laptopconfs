@@ -2,12 +2,17 @@
   dnf: name={{ item }}
   with_items:
     - keepassxc
+    - kitty
     - snapd
+  become: yes
 
 - name: Install from snap
   snap: name={{ item }}
   with_items:
     - bitwarden
+    - discord
+    - signal-desktop
+  become: yes
 
 - name: Add keepassxc favorite
   copy:
