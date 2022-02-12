@@ -33,3 +33,8 @@
     name: "{{ ansible_user_id }}"
     shell: /usr/bin/fish
   become: True
+
+- name: Configure Kitty
+  copy:
+    src: "{{ role_path }}/files/kitty.conf"
+    dest: ~/.config/kitty/kitty.conf

@@ -82,7 +82,7 @@
   when: not omf.stat.exists
 
 - name: Install omf
-  shell: fish /tmp/omfinstall.fish --noninteractive
+  shell: fish /tmp/omfinstall.fish --noninteractive --yes
   when: not omf.stat.exists
 
 - name: Install bobthefish
