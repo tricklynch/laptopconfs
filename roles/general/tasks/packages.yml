@@ -51,12 +51,36 @@
   with_items:
     - gping
 
+- name: Are fonts installed
+  stat:
+    path: ~/.local/share/fonts/NerdFonts
+  register: fonts
+
+- name: Retrieve fonts
+  git:
+    repo: https://github.com/ryanoasis/nerd-fonts.git
+    dest: /tmp/nerd-fonts
+    clone: True
+    depth: 1
+  when: not fonts.stat.exists
+
+- name: Install fonts
+  shell: sh /tmp/nerd-fonts/install.sh
+  when: not fonts.stat.exists
+
+- name: Is omf installed
+  stat:
+    path: ~/.local/share/omf
+  register: omf
+
 - name: Get omf installer
   get_url:
     url: https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
     checksum: "sha256:https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install.sha256"
     dest: /tmp/omfinstall.fish
     mode: 500
+  when: not omf.stat.exists
 
 - name: Install omf
   shell: fish /tmp/omfinstall.fish --noninteractive
+  when: not omf.stat.exists
