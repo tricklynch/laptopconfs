@@ -1,6 +1,7 @@
 - name: Install from dnf
   dnf: name={{ item }}
   with_items:
+    - asciinema
     - cloc
     - cowsay
     - fortune-mod
