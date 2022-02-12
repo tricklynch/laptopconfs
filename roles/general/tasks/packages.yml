@@ -1,6 +1,6 @@
 - name: Install from dnf
   dnf: name={{ item }}
-  with_items:
+  loop:
     - asciinema
     - cloc
     - cowsay
@@ -21,7 +21,7 @@
 
 - name: Install from snap
   snap: name={{ item }}
-  with_items:
+  loop:
     - bitwarden
     - discord
     - signal-desktop
@@ -31,12 +31,12 @@
   snap:
     name: "{{ item }}"
     classic: true
-  with_items:
+  loop:
     - code
   become: true
 - name: Install from homebrew
   homebrew: name={{ item }}
-  with_items:
+  loop:
     - dog
     - git
     - htop
@@ -48,7 +48,7 @@
   homebrew:
     name={{ item }}
     install_options=build-from-source
-  with_items:
+  loop:
     - gping
 
 - name: Are fonts installed
@@ -97,6 +97,6 @@
 
 - name: Install system python packages
   pip: name={{ item }}
-  with_items:
+  loop:
     - ansible-lint
     - pre-commit

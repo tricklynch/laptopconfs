@@ -1,6 +1,6 @@
 - name: Ensure anticipated tools are installed on $PATH
   command: "which {{ item }}"
-  with_items:
+  loop:
     - ansible-playbook
     - ansible-lint
     - asciinema
