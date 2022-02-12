@@ -1,0 +1,19 @@
+- name: Ensure anticipated tools are installed on $PATH
+  command: "which {{ item }}"
+  with_items:
+    - ansible-playbook
+    - brew
+    - cloc
+    - code
+    - dog
+    - dnf
+    - fish
+    - gping
+    - grep
+    - snap
+    - vim
+
+- name: Ensure fish is default shell
+  shell: "userdbctl | grep {{ ansible_user_id }}"
+  register: default_shell_result
+  failed_when: '"fish" not in default_shell_result.stdout'
