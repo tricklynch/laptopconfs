@@ -1,8 +1,11 @@
 - name: Install from dnf
   dnf: name={{ item }}
   with_items:
+    - cowsay
+    - fortune-mod
     - keepassxc
     - kitty
+    - lolcat
     - snapd
   become: True
 
