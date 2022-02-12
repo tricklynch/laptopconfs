@@ -5,6 +5,7 @@
     - ansible-lint
     - asciinema
     - authy
+    - bc
     - bitwarden
     - brew
     - cloc
