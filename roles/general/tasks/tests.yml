@@ -2,6 +2,7 @@
   command: "which {{ item }}"
   with_items:
     - ansible-playbook
+    - ansible-lint
     - brew
     - cloc
     - code

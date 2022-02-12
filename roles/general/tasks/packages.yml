@@ -94,3 +94,7 @@
   shell: fish -c "omf install bobthefish"
   when: not bobthefish.stat.exists
 
+- name: Install system python packages
+  pip: name={{ item }}
+  with_items:
+    - ansible-lint
