@@ -1,20 +1,3 @@
-- name: Install from homebrew
-  homebrew: name={{ item }}
-  with_items:
-    - dog
-    - git
-    - htop
-    - python3
-    - vim
-    - wget
-
-- name: Install from homebrew build from source
-  homebrew:
-    name={{ item }}
-    install_options=build-from-source
-  with_items:
-    - gping
-
 - name: Default git branch
   git_config:
     name: init.defaultBranch

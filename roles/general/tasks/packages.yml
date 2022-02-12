@@ -1,0 +1,51 @@
+- name: Install from dnf
+  dnf: name={{ item }}
+  with_items:
+    - asciinema
+    - cloc
+    - cowsay
+    - fortune-mod
+    - keepassxc
+    - kitty
+    - lolcat
+    - snapd
+  become: True
+
+- name: Configure snap
+  ansible.builtin.file:
+    src: /var/lib/snapd/snap
+    dest: /snap
+    state: link
+  become: True
+
+- name: Install from snap
+  snap: name={{ item }}
+  with_items:
+    - bitwarden
+    - discord
+    - signal-desktop
+  become: True
+
+- name: Install from snap with classic
+  snap:
+    name: "{{ item }}"
+    classic: True
+  with_items:
+    - code
+  become: True
+- name: Install from homebrew
+  homebrew: name={{ item }}
+  with_items:
+    - dog
+    - git
+    - htop
+    - python3
+    - vim
+    - wget
+
+- name: Install from homebrew build from source
+  homebrew:
+    name={{ item }}
+    install_options=build-from-source
+  with_items:
+    - gping
