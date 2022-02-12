@@ -3,16 +3,30 @@
   with_items:
     - ansible-playbook
     - ansible-lint
+    - asciinema
+    - bitwarden
     - brew
     - cloc
     - code
+    - cowsay
+    - discord
     - dog
     - dnf
     - fish
+    - fortune
+    - git
     - gping
     - grep
+    - htop
+    - keepassxc
+    - kitty
+    - lolcat
+    - pip
     - pre-commit
+    - python
+    - signal-desktop
     - snap
+    - wget
     - vim
   when: true
 
