@@ -13,7 +13,7 @@
   become: True
 
 - name: Configure snap
-  ansible.builtin.file:
+  file:
     src: /var/lib/snapd/snap
     dest: /snap
     state: link
@@ -85,5 +85,12 @@
   shell: fish /tmp/omfinstall.fish --noninteractive --yes
   when: not omf.stat.exists
 
+- name: Is bobthefish installed
+  stat:
+    path: ~/.local/share/omf/themes/bobthefish
+  register: bobthefish
+
 - name: Install bobthefish
   shell: fish -c "omf install bobthefish"
+  when: not bobthefish.stat.exists
+
