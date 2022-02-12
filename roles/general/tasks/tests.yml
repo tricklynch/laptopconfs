@@ -22,6 +22,7 @@
     - htop
     - keepassxc
     - lolcat
+    - mdless
     - pip
     - pre-commit
     - python

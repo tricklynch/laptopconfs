@@ -26,6 +26,7 @@
     - authy
     - bitwarden
     - discord
+    - mdless
     - signal-desktop
   become: true
 
