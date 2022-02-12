@@ -22,6 +22,7 @@
 - name: Install from snap
   snap: name={{ item }}
   loop:
+    - authy
     - bitwarden
     - discord
     - signal-desktop
@@ -34,6 +35,7 @@
   loop:
     - code
   become: true
+
 - name: Install from homebrew
   homebrew: name={{ item }}
   loop:
