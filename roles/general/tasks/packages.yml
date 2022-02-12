@@ -62,10 +62,11 @@
     dest: /tmp/nerd-fonts
     clone: True
     depth: 1
+    version: c98cb457d45ad71866c6e51aa6a57e9123d3d7cf
   when: not fonts.stat.exists
 
 - name: Install fonts
-  shell: sh /tmp/nerd-fonts/install.sh
+  command: /tmp/nerd-fonts/install.sh
   when: not fonts.stat.exists
 
 - name: Is omf installed
@@ -82,7 +83,7 @@
   when: not omf.stat.exists
 
 - name: Install omf
-  shell: fish /tmp/omfinstall.fish --noninteractive --yes
+  command: fish /tmp/omfinstall.fish --noninteractive --yes
   when: not omf.stat.exists
 
 - name: Is bobthefish installed
@@ -91,7 +92,7 @@
   register: bobthefish
 
 - name: Install bobthefish
-  shell: fish -c "omf install bobthefish"
+  command: fish -c "omf install bobthefish"
   when: not bobthefish.stat.exists
 
 - name: Install system python packages

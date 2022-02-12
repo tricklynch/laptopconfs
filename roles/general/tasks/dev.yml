@@ -38,3 +38,4 @@
   copy:
     src: "{{ role_path }}/files/kitty.conf"
     dest: ~/.config/kitty/kitty.conf
+    mode: 0600
