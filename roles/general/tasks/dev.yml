@@ -27,3 +27,9 @@
     url: https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
     dest: ~/.vimrc
     mode: 0600
+
+- name: Set fish as default shell
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/bin/fish
+  become: True
