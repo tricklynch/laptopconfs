@@ -22,6 +22,18 @@
     value: Patrick Lynch
     scope: global
 
+- name: Set commit signing key
+  git_config:
+    name: user.signingkey
+    value: CD942B9EF7D9247C
+    scope: global
+
+- name: Sign all commits
+  git_config:
+    name: commit.gpgsign
+    value: true
+    scope: global
+
 - name: Get vimrc
   get_url:
     url: https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim

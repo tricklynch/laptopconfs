@@ -17,6 +17,7 @@
     - fortune
     - git
     - gping
+    - gpg
     - grep
     - htop
     - keepassxc
