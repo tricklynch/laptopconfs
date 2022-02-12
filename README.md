@@ -37,7 +37,7 @@ branch. Pull requests are warmly welcome.
 - Issue tracker: https://github.com/tricklynch/laptopconfs/issues
   - In case of sensitive bugs like security vulnerabilities, please contact
     p+laptopconfs@tricklynch.org directly instead of using issue tracker.
-    We value your effort to improve the security and privacy of this project!
+    I value your effort to improve the security and privacy of this project!
 - README.md template: https://raw.githubusercontent.com/jehna/readme-best-practices/master/README-default.md
 
 ## Licensing
