@@ -2,3 +2,4 @@
   copy:
     src: "{{ role_path }}/files/KeePassXC.desktop"
     dest: /usr/share/applications/KeePassXC.desktop
+  become: True
