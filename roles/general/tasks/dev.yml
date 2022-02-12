@@ -32,7 +32,7 @@
   user:
     name: "{{ ansible_user_id }}"
     shell: /usr/bin/fish
-  become: True
+  become: true
 
 - name: Configure Kitty
   copy:

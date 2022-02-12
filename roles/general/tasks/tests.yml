@@ -11,12 +11,13 @@
     - fish
     - gping
     - grep
+    - pre-commit
     - snap
     - vim
-  when: True
+  when: true
 
 - name: Ensure fish is default shell
   shell: "set -euo pipefail && userdbctl | grep {{ ansible_user_id }}"
   register: default_shell_result
   failed_when: '"fish" not in default_shell_result.stdout'
-  when: True
+  when: true
