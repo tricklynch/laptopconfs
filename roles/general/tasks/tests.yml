@@ -28,8 +28,8 @@
     - python
     - signal-desktop
     - snap
-    - wget
     - vim
+    - xclip
   when: true
 
 - name: Ensure fish is default shell
