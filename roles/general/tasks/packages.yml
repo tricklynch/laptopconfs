@@ -84,3 +84,6 @@
 - name: Install omf
   shell: fish /tmp/omfinstall.fish --noninteractive
   when: not omf.stat.exists
+
+- name: Install bobthefish
+  shell: fish -c "omf install bobthefish"
