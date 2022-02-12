@@ -46,8 +46,19 @@
     shell: /usr/bin/fish
   become: true
 
-- name: Configure Kitty
+- name: Does Terminator config dir exist
+  stat:
+    path: ~/.config/terminator
+  register: terminator_conf_dir
+
+- name: Make Terminator config directory
+  file:
+    path: ~/.config/terminator
+    state: directory
+  when: not terminator_conf_dir.stat.exists
+
+- name: Configure Terminator
   copy:
-    src: "{{ role_path }}/files/kitty.conf"
-    dest: ~/.config/kitty/kitty.conf
+    src: "{{ role_path }}/files/terminator.conf"
+    dest: ~/.config/terminator/config
     mode: 0600

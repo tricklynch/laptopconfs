@@ -21,13 +21,13 @@
     - grep
     - htop
     - keepassxc
-    - kitty
     - lolcat
     - pip
     - pre-commit
     - python
     - signal-desktop
     - snap
+    - terminator
     - vim
     - xclip
   when: true

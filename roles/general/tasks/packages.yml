@@ -7,9 +7,9 @@
     - fish
     - fortune-mod
     - keepassxc
-    - kitty
     - lolcat
     - snapd
+    - terminator
     - xclip
   become: true
 
