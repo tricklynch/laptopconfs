@@ -50,3 +50,13 @@
     install_options=build-from-source
   with_items:
     - gping
+
+- name: Get omf installer
+  get_url:
+    url: https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install
+    checksum: "sha256:https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install.sha256"
+    dest: /tmp/omfinstall.fish
+    mode: 500
+
+- name: Install omf
+  shell: fish /tmp/omfinstall.fish --noninteractive
