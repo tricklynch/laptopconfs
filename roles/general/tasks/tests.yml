@@ -29,8 +29,10 @@
     - signal-desktop
     - snap
     - terminator
+    - unzip
     - vim
     - xclip
+    - zip
   when: true
 
 - name: Ensure fish is default shell
