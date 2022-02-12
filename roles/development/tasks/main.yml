@@ -43,4 +43,4 @@
   get_url:
     url: https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
     dest: ~/.vimrc
-    mode: 0400
+    mode: 0600
