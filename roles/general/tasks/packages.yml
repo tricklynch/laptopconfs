@@ -1,9 +1,22 @@
+- name: Add RPM Fusion Free key
+  rpm_key:
+    key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+    state: present
+  become: true
+
+- name: Enable RPM Fusion
+  dnf:
+    name: https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
+  become: true
+
 - name: Install from dnf
   dnf: name={{ item }}
   loop:
     - asciinema
     - cloc
     - cowsay
+    - ffmpeg-libs
     - fish
     - fortune-mod
     - keepassxc
