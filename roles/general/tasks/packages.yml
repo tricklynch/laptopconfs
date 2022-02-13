@@ -21,6 +21,7 @@
     - fortune-mod
     - keepassxc
     - lolcat
+    - mpv
     - snapd
     - terminator
     - xclip
@@ -76,7 +77,6 @@
   git:
     repo: https://github.com/ryanoasis/nerd-fonts.git
     dest: /tmp/nerd-fonts
-    clone: true
     depth: 1
     version: c98cb457d45ad71866c6e51aa6a57e9123d3d7cf
   when: not fonts.stat.exists
@@ -116,3 +116,34 @@
   loop:
     - ansible-lint
     - pre-commit
+
+- name: Is spongebob-cli downloaded
+  stat:
+    path: ~/Documents/spongebob-cli
+  register: sbcli_downloaded
+
+- name: Clone spongebob-cli
+  git:
+    repo: https://github.com/trakBan/spongebob-cli
+    dest: ~/Documents/spongebob-cli
+    depth: 1
+    version: eac7eded094a483495ac855cebadf1e168ee5b78
+  when: not sbcli_downloaded.stat.exists
+
+- name: Is spongebob-cli installed
+  command: which spongebob-cli
+  register: sbcli_installed
+  failed_when: false
+  when: true
+
+- name: Make spongebob-cli executable
+  file:
+    path: ~/Documents/spongebob-cli/spongebob-cli
+    mode: 0500
+  when: sbcli_installed.rc != 0
+
+- name: Install spongebob-cli
+  command: python setup.py install --user
+  args:
+    chdir: ~/Documents/spongebob-cli
+  when: sbcli_installed.rc != 0

@@ -55,6 +55,7 @@
   file:
     path: ~/.config/terminator
     state: directory
+    mode: 0700
   when: not terminator_conf_dir.stat.exists
 
 - name: Configure Terminator
