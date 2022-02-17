@@ -1,0 +1,7 @@
+- name: Configure Terminator
+  copy:
+    src: "{{ role_path }}/files/steam.desktop"
+    dest: /usr/share/applications/steam.desktop
+    owner: "{{ ansible_user_id }}"
+    mode: 0600
+  become: true

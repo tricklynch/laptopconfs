@@ -1,3 +1,4 @@
 - import_tasks: packages.yml
 - import_tasks: dev.yml
+- import_tasks: games.yml
 - import_tasks: tests.yml
