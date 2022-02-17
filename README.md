@@ -12,7 +12,7 @@ everything, cleanup should be as easy as setup.
 Install Ansible and run the playbook
 
 ```shell
-sudo dnf uninstall ansible
+sudo dnf install ansible
 ansible-playbook site.yml
 ```
 
