@@ -24,6 +24,9 @@
     - keepassxc
     - lolcat
     - mdless
+    - node
+    - npm
+    - npx
     - pip
     - pre-commit
     - python
