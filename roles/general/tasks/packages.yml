@@ -10,6 +10,12 @@
     state: present
   become: true
 
+- name: Add Vivaldi key
+  rpm_key:
+    key: https://repo.vivaldi.com/stable/linux_signing_key.pub
+    state: present
+  become: true
+
 - name: Enable RPM Fusion (free)
   dnf:
     name: https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
@@ -19,6 +25,14 @@
 - name: Enable RPM Fusion (nonfree)
   dnf:
     name: https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
+  become: true
+
+- name: Enable Vivaldi repo
+  yum_repository:
+    baseurl: https://repo.vivaldi.com/archive/rpm/x86_64
+    name: vivaldi
+    description: Repo for Vivaldi browser
     state: present
   become: true
 
@@ -38,6 +52,7 @@
     - snapd
     - steam
     - terminator
+    - vivaldi-stable
     - xclip
   become: true
 

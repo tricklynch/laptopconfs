@@ -36,6 +36,7 @@
     - terminator
     - unzip
     - vim
+    - vivaldi
     - xclip
     - zip
   when: true
