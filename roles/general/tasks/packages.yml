@@ -45,6 +45,7 @@
     - ffmpeg-libs
     - fish
     - fortune-mod
+    - graphviz
     - keepassxc
     - lolcat
     - mpv
