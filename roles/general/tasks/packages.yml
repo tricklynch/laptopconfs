@@ -64,6 +64,12 @@
     state: link
   become: true
 
+- name: Make snap apps show up in launcher
+  file:
+    src: /var/lib/snapd/desktop/applications
+    dest: ~/.local/share/applications/snap
+    state: link
+
 - name: Install from snap
   snap: name={{ item }}
   loop:
