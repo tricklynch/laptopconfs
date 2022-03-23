@@ -40,6 +40,7 @@
   dnf: name={{ item }}
   loop:
     - asciinema
+    - clang
     - cloc
     - cowsay
     - ffmpeg-libs
@@ -50,6 +51,7 @@
     - lolcat
     - mpv
     - nodejs
+    - python3-devel
     - snapd
     - steam
     - terminator
