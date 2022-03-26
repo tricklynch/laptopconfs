@@ -46,6 +46,9 @@
     - ffmpeg-libs
     - fish
     - fortune-mod
+    - golang
+    - golang-godoc
+    - golang-src
     - graphviz
     - keepassxc
     - lolcat
