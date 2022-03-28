@@ -55,6 +55,7 @@
     - mpv
     - nodejs
     - python3-devel
+    - rtorrent
     - snapd
     - steam
     - terminator
