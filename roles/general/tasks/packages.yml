@@ -157,6 +157,7 @@
   pip: name={{ item }}
   loop:
     - ansible-lint
+    - aws-sam-cli
     - pre-commit
 
 - name: Is spongebob-cli downloaded
