@@ -63,3 +63,10 @@
     src: "{{ role_path }}/files/terminator.conf"
     dest: ~/.config/terminator/config
     mode: 0600
+
+- name: Start Docker Daemon
+  systemd:
+    enabled: true
+    name: docker
+    state: started
+  become: true

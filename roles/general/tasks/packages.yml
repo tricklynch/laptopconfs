@@ -39,10 +39,14 @@
 - name: Install from dnf
   dnf: name={{ item }}
   loop:
+    - akmod-VirtualBox
     - asciinema
     - clang
     - cloc
+    - containerd.io
     - cowsay
+    - docker-ce
+    - docker-ce-cli
     - ffmpeg-libs
     - fish
     - fortune-mod
@@ -51,6 +55,7 @@
     - golang-src
     - graphviz
     - keepassxc
+    - kernel-devel
     - lolcat
     - mpv
     - nodejs
@@ -59,6 +64,7 @@
     - snapd
     - steam
     - terminator
+    - VirtualBox-devel
     - vivaldi-stable
     - xclip
   become: true
