@@ -41,6 +41,7 @@
   loop:
     - akmod-VirtualBox
     - asciinema
+    - buildah
     - clang
     - cloc
     - containerd.io
@@ -61,6 +62,7 @@
     - nodejs
     - python3-devel
     - rtorrent
+    - skopeo
     - snapd
     - steam
     - terminator
