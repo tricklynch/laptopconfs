@@ -167,6 +167,7 @@
   loop:
     - ansible-lint
     - aws-sam-cli
+    - poetry
     - pre-commit
 
 - name: Is spongebob-cli downloaded
