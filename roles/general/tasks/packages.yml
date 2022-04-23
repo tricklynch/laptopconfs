@@ -60,6 +60,7 @@
     - lolcat
     - mpv
     - nodejs
+    - postgresql
     - python3-devel
     - qemu-system-aarch64
     - rtorrent
