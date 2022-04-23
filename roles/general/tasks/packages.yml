@@ -61,6 +61,7 @@
     - mpv
     - nodejs
     - python3-devel
+    - qemu-system-aarch64
     - rtorrent
     - skopeo
     - snapd
