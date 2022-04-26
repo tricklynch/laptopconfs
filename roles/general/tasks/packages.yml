@@ -94,6 +94,7 @@
     - discord
     - mdless
     - signal-desktop
+    - slack
   become: true
 
 - name: Install from snap with classic
