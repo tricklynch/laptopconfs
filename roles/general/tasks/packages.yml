@@ -51,6 +51,7 @@
     - ffmpeg-libs
     - fish
     - fortune-mod
+    - gimp
     - golang
     - golang-godoc
     - golang-src
