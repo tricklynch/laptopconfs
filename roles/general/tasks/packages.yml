@@ -63,6 +63,7 @@
     - nodejs
     - postgresql
     - python3-devel
+    - python3-tkinter
     - qemu-system-aarch64
     - rtorrent
     - skopeo
