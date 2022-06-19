@@ -62,6 +62,7 @@
     - mpv
     - nodejs
     - postgresql
+    - postgresql-devel
     - python3-devel
     - python3-tkinter
     - qemu-system-aarch64
