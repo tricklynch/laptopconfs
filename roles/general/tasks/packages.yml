@@ -52,9 +52,6 @@
     - fish
     - fortune-mod
     - gimp
-    - golang
-    - golang-godoc
-    - golang-src
     - graphviz
     - keepassxc
     - kernel-devel
@@ -114,6 +111,7 @@
   loop:
     - dog
     - git
+    - golang
     - htop
     - python3
     - vim
