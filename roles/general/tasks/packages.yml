@@ -110,6 +110,7 @@
   homebrew: name={{ item }}
   loop:
     - dog
+    - gcc@5
     - git
     - golang
     - htop
