@@ -41,18 +41,26 @@
   loop:
     - akmod-VirtualBox
     - asciinema
+    - bsdtar
     - buildah
     - clang
     - cloc
     - containerd.io
     - cowsay
+    - dnf-plugins-core
     - docker-ce
     - docker-ce-cli
+    - dosfstools
+    - e2fsprogs
+    - elixir
+    - erlang
     - ffmpeg-libs
     - fish
     - fortune-mod
     - gimp
+    - gparted
     - graphviz
+    - inotify-tools
     - keepassxc
     - kernel-devel
     - lolcat
@@ -63,6 +71,8 @@
     - python3-devel
     - python3-tkinter
     - qemu-system-aarch64
+    - qemu-user-static
+    - redis
     - rtorrent
     - skopeo
     - snapd
